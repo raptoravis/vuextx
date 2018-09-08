@@ -13,10 +13,10 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
-import tt from "@/components/transitiontest.vue"; // @ is an alias to /src
-import UserDetail from "@/components/user-detail.vue"; // @ is an alias to /src
+import { Component, Vue } from 'vue-property-decorator';
+import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import tt from '@/components/transitiontest.vue'; // @ is an alias to /src
+import UserDetail from '@/components/user-detail.vue'; // @ is an alias to /src
 
 @Component({
   components: {
@@ -26,7 +26,7 @@ import UserDetail from "@/components/user-detail.vue"; // @ is an alias to /src
   }
 })
 export default class Home extends Vue {
-  message = "Hello World!";
+  message = 'Hello World!';
   x = 1;
   y = 2;
 
@@ -44,11 +44,11 @@ export default class Home extends Vue {
   created() {
     setTimeout(() => {
       const msg: any = this.$refs.message;
-      msg.innerText = "This is a test";
+      msg.innerText = 'This is a test';
     }, 2000);
 
     setTimeout(() => {
-      this.message = "This is another test";
+      this.message = 'This is another test';
     }, 4000);
   }
 }

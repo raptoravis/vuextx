@@ -9,10 +9,10 @@
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: 'HelloWorld',
   data() {
     return {
-      msg: "welcome to your Vue.js App",
+      msg: 'welcome to your Vue.js App',
       status: false
     };
   },

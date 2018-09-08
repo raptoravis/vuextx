@@ -16,22 +16,24 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import { State, Action, Getter } from "vuex-class";
-import Component from "vue-class-component";
-import { ProfileState, User } from "../vuexts/profile/types";
-const namespace: string = "profile";
+import Vue from 'vue';
+import { State, Action, Getter } from 'vuex-class';
+import Component from 'vue-class-component';
+import { ProfileState, User } from '../vuexts/profile/types';
+const namespace: string = 'profile';
 
 @Component
 export default class UserDetail extends Vue {
-  @State("version") version!: string;
+  @State('version')
+  version!: string;
 
-  @State("profile") profile!: ProfileState;
+  @State('profile')
+  profile!: ProfileState;
 
-  @Action("fetchData", { namespace })
+  @Action('fetchData', { namespace })
   fetchData: any;
 
-  @Getter("fullName", { namespace })
+  @Getter('fullName', { namespace })
   fullName!: string;
 
   mounted() {
@@ -42,7 +44,7 @@ export default class UserDetail extends Vue {
   // computed variable based on user's email
   get email() {
     const user = this.profile && this.profile.user;
-    return (user && user.email) || "";
+    return (user && user.email) || '';
   }
 }
 </script>
