@@ -24,11 +24,9 @@ const namespace: string = 'profile';
 
 @Component
 export default class UserDetail extends Vue {
-  @State('version')
-  version!: string;
+  @State('version') version!: string;
 
-  @State('profile')
-  profile!: ProfileState;
+  @State('profile') profile!: ProfileState;
 
   @Action('fetchData', { namespace })
   fetchData: any;
